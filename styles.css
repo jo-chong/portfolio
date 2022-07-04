@@ -454,6 +454,12 @@ button:hover {
     margin: auto;
 }
 
+@media screen and (max-width:450px) {
+    .about-wrapper {
+        padding: 40px 40px;
+    }
+}
+
 /* ATLAS */
 .atlas-wrapper {
     display: grid;
@@ -581,6 +587,12 @@ p#words {
 .atlas-wrapper section:hover .atlas-coming-soon-text {
     opacity: 1;
     z-index: 1000000;
+}
+
+@media screen and (max-width:450px) {
+    .atlas-wrapper {
+        padding: 40px 50px;
+    }
 }
 
 /* ATLAS SUB STYLES */
