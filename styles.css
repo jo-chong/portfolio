@@ -235,17 +235,17 @@ button:hover {
     }
 
     .personal .subtitle {
-        font-size: 14px;
+        font-size: 16px;
         margin-bottom: 20px;
     }
 
     .details {
-        font-size: 12px;
+        font-size: 14px;
         line-height: 20px;
     }
 
     .social-icon {
-        font-size: 14px;
+        font-size: 16px;
     }
 }
 
@@ -982,4 +982,10 @@ p#mixtape-title {
 
 #coming-soon-mixtape {
     opacity: 0;
+}
+
+@media screen and (max-width:450px) {
+    .mixtape-wrapper {
+        padding: 40px 50px;
+    }
 }
