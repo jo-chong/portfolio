@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Coming Soon &#8212; JO. CHONG</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="styles.css"
+  <script src="script.js"></script>
+</head>
+
+<body>
+<div id="coming-soon" class="container">
+<!-- NAVBAR -->
+<div class="nav-wrapper">
+    <a href="index.html" class="name">JO. CHONG</a>
+    <div class="button-wrapper"><button data-text-swap="&#8722">&#43;</button></div>
+    <div class="dropdown-menu">
+      <div class="column-1">
+        <a href="about.html" class="link">About</a>
+        <a href="atlas.html" class="link">Atlas</a>
+        <a href="mixtape.html" class="link">Mixtapes</a>
+        <a href="coming-soon.html" class="link">Projects</a>
+        <a href="coming-soon.html" class="link">Store</a>
+      </div>
+      <div class="column-2">
+        <div class = "personal">
+          <p class="title"> Portfolio: Joelle </p>
+          <p class="subtitle"> A pasta shape enthusiast </p>
+          <p class="details">Location: Tropical Singapore</p>
+          <p class="details">Say Hi: @joallakoala</p>
+        </div>
+        <div class = social-icon-wrapper>
+          <a class="social-icon" href="https://www.instagram.com/joallakoala" target="_blank">
+            <ion-icon name="logo-instagram"></ion-icon> </a>
+          <a class="social-icon" href="https://www.linkedin.com/in/chong-jo" target="_blank">
+            <ion-icon name="logo-linkedin"></ion-icon> </a>
+          <a class="social-icon" href="https://www.pinterest.com/joallakoala/_created/" target="_blank">
+            <ion-icon name="logo-pinterest"></ion-icon> </a>
+        </div>
+      </div>
+      </div>
+  </div>
+
+  <!-- COMING SOON -->
+<div class="coming-soon-wrapper">
+    <div class="coming-soon-text-wrapper">
+        <div class="coming-soon-text">Coming Soon.</div>
+    </div>
+</div>
+</div>
+
+
+  <!-- Javascript -->
+  <!-- BUTTON JAVASCRIPT -->
+<script>
+    let click = document.querySelector('button');
+    let list = document.querySelector('.dropdown-menu');
+    click.addEventListener("click",()=>{
+      list.classList.toggle('newdropdown-menu');
+    });
+  </script>
+  <script>
+    var button = document.querySelectorAll("button")[0];
+    button.addEventListener('click', function() {
+    if (button.getAttribute("data-text-swap") == button.innerHTML) {
+    button.innerHTML = button.getAttribute("data-text-original");
+    } else {
+    button.setAttribute("data-text-original", button.innerHTML);
+    button.innerHTML = button.getAttribute("data-text-swap");
+    }
+    }, false);
+  </script>
+  
+    <!-- SOCIAL MEDIA ICONS (leave here) -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</script>
+
+</body>
+</html>

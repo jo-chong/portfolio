@@ -1,0 +1,972 @@
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Master Styles */
+body {
+    /* width: 100%; */
+    margin: 0;
+    background-color: white;
+}
+
+/* SPLASH SCREEN */
+.intro {
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh; 
+    /* background-color: white; */
+    background-image: url(images/homepage/20211130-ODF-225.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 1s;
+}
+
+.logo-header {
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    color: #F34B26;
+    font-family: 'EB Garamond', serif;
+    font-size: 28px;
+}
+
+.logo {
+    position: relative;
+    display: inline-block;
+    bottom: -20px; 
+    opacity: 0;
+}
+
+.logo.active {
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+}
+
+.logo.fade {
+    bottom: 150px;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+}
+
+/* Nav Bar Styles */
+#homepage {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    align-items: center;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items:center; 
+    align-content: center;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    z-index: 2;
+    background-color: white;
+}
+
+.name {
+    font-family: 'EB Garamond', serif;
+    color: black;
+    font-size: 28px;
+    text-decoration: none;
+    float: left;
+    padding: 40px 60px;
+    position: relative;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 10px; */
+    overflow: hidden;
+}
+
+button {
+    border: none;
+    overflow: hidden;
+    position: relative;
+    background-color: transparent;
+    /* float: right; */
+    text-decoration: none;
+    color: #F34B26;
+    font-family:'EB Garamond', serif;
+    font-size: 28px;
+    transition: transform 350ms ease-in-out;
+    padding: 40px 70px;
+}
+
+button:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+    transition: transform 350ms ease-in-out;
+    overflow: hidden;
+}
+
+.dropdown-menu {
+    position: absolute;
+    display: flex;
+    top: 75px;
+    padding: 0 100px;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: white;
+    z-index: 1; /* Ensures dropdown menu appears in front */
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    pointer-events: none;
+}
+
+.newdropdown-menu {
+    opacity: 0.9;
+    transform: translateY(40px);
+    pointer-events: auto;
+    transition: opacity 350ms ease-in-out, transform 150ms ease-in-out;
+    overflow: hidden;
+}
+
+.link {
+    border: none;
+    text-decoration: none;
+    color: black;
+    font-family: 'EB Garamond', serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 26px;
+    display: block;
+    text-decoration: underline 0.1px white;
+    transition: color 350ms ease-in-out; 
+    transition: text-decoration-color 350ms ease-in-out; 
+}
+
+.link:hover {
+    color: #777;
+    text-decoration-color: #777;
+}
+
+.dropdown-menu > *{
+    flex: 1;
+    height: 100%;
+}
+
+.column-1 {
+    letter-spacing: 4px;
+    line-height: 50px;
+    }
+
+.personal {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.personal .title {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 26px;
+    font-weight:400;
+    font-style: normal;
+    color: #F34B26;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    margin-top: 12px;
+}
+
+.personal .subtitle {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    font-weight: 200;
+    font-style: normal;
+    color: #F34B26;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+
+.details {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    font-style: normal;
+    color: #F34B26;
+}
+
+.social-icon-wrapper {
+    position: relative;
+}
+
+.social-icon {
+    color: #F34B26;
+    text-decoration: none;
+    margin: 0 10px 0 0;
+    font-size: 18px;
+}
+
+.social-icon:hover {
+    color: #777;
+    transition: color 350ms ease-in-out;
+}
+
+@media screen and (max-width:768px) {
+    .column-1 {
+        line-height: 40px;
+    }
+
+    .link {
+       font-size: 22px;
+   } 
+
+   .personal .title {
+       font-size: 22px;
+       margin-top: 9px;
+    }
+
+    .personal .subtitle {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .details {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .social-icon {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .dropdown-menu {
+        flex-direction: column;
+        padding: 0 80px;
+    }
+
+    .column-2 {
+        margin-bottom: 40px;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .name {
+        font-size: 24px;
+        padding: 40px 40px;
+    }
+
+    button {
+        padding: 40px 40px;
+        font-size: 24px;
+    }
+
+    .dropdown-menu {
+        padding: 0 60px;
+    }
+}
+
+/* Portfolio Styles */
+#content-wrapper {
+    margin: auto;
+    margin-top: 120px;
+    width: 100%;
+    height: calc(100vh - 120px);
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+#content-wrapper section {
+    height: calc(100vh - 120px); 
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio-img-background {
+    width: 50%; 
+    margin: 10px;
+    padding-top: 33.33%; /* aspect ratio of image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.portfolio-img-background-hover {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%; 
+    padding-top: 33.33%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 350ms ease-in-out;
+}
+
+#content-wrapper:hover .portfolio-img-background-hover {
+    opacity: 1;
+}
+
+.annotation-portfolio {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 40%;
+}
+
+.annotation-portfolio .subtitle {
+    margin-left: 10px;
+    font-size: 9px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 14px;
+    font-weight:400;
+    font-style: normal;
+    color: #F34B26;
+    writing-mode: vertical-lr;
+    transition: color 350ms ease-in-out;
+    
+}
+
+.arrow {
+    margin-left: 10px;
+    font-size: 9px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 14px;
+    font-weight:400;
+    font-style: normal;
+    color: #F34B26;
+    writing-mode: vertical-lr;
+    transition: color 350ms ease-in-out;
+}
+
+#content-wrapper:hover .subtitle {
+    color: black;
+} 
+
+#content-wrapper:hover .arrow {
+    color: black;
+}
+
+@media screen and (max-width:768px) {
+    .portfolio-img-background {
+        width: 70%; 
+        padding-top: 50%;
+    }
+
+    .annotation-portfolio .subtitle,
+    .arrow {
+        font-size: 12px;
+    }
+
+    .annotation-portfolio {
+        height: 30%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .annotation-portfolio .subtitle,
+    .arrow {
+        font-size: 10px;
+    }
+
+    .annotation-portfolio {
+        height: 25%;
+    }
+}
+
+/* About Page */
+#about {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    align-items: center;
+}
+
+.about-wrapper {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px;
+    padding: 40px 100px;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 120px;
+}
+
+.about-header {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 26px;
+    font-weight: 400;
+    font-style: normal;
+    color: #F34B26;
+}
+
+.about-body p {
+    font-family: 'EB Garamond', serif;
+    color: black;
+    font-size: 16px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.first-character {
+    color: #F34B26;
+    font-family: 'EB Garamond', serif;
+    float: left;
+    line-height: 85%;
+    width: 30px;
+    font-size: 300%;
+  }
+
+.profile-pic-wrapper {
+    width: 100%;
+}
+
+.profile-pic-img {
+    aspect-ratio: 4 / 5;
+    width: 80%;
+    max-width: 400px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    margin: auto;
+}
+
+/* ATLAS */
+.atlas-wrapper {
+    display: grid;
+    grid-auto-flow: row;
+    grid-gap: 30px;
+    padding: 40px 100px;
+    margin-top: 120px;
+}
+
+.atlas-wrapper .country {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    color: #F34B26;
+}
+
+.atlas-wrapper .country-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 50px;
+    
+}   
+
+.atlas-wrapper section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+    transition: transform 350ms ease-in-out;
+}
+
+.atlas-wrapper section:hover {
+    transform: translateY(-5px);
+}
+
+.atlas-img-background {
+    aspect-ratio: 4 / 5;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.annotation-atlas {
+    line-height: 20px;
+}
+
+p#location {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+    color: #777;
+    letter-spacing: 2px;
+}
+
+p#title {
+    font-family: 'EB Garamond', serif;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    color: black;
+    transition: color 350ms ease-in-out;
+}
+
+.annotation-atlas a {
+    text-decoration: none;
+}
+
+p#words {
+    font-family: 'EB Garamond', serif;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
+    
+}
+
+.atlas-wrapper section:hover p#title {
+    color: #F34B26;
+}
+
+.img-background-coming-soon {
+    aspect-ratio: 4 / 5;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    transition: opacity 350ms ease-in-out;
+}
+
+.atlas-coming-soon {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 350ms ease-in-out;
+}
+
+.atlas-coming-soon-text {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 2px;
+    color: white;
+    opacity: 0;
+    z-index: 10000;
+    transition: color 350ms ease-in-out;
+    cursor: default;
+}
+
+.atlas-wrapper section:hover .atlas-coming-soon {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.atlas-wrapper section:hover .atlas-coming-soon-text {
+    opacity: 1;
+    z-index: 1000000;
+}
+
+/* ATLAS SUB STYLES */
+#atlas-sub {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    align-items: center;
+}
+
+.atlas-sub-wrapper {
+    padding: 40px 100px;
+    margin-top: 120px;
+    gap: 50px;
+}
+
+.atlas-sub-cover-img-wrapper {
+    width: 100%;
+}
+
+.atlas-sub-cover-img-background {
+    aspect-ratio: 3 / 2;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.atlas-sub-top {
+    margin-bottom: 30px;
+}
+
+.atlas-sub-top div {
+    margin-bottom: 20px;
+}
+
+p#atlas-sub-location {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+    color: #777;
+    letter-spacing: 2px;
+}
+
+p#atlas-sub-title {
+    font-family: 'EB Garamond', serif;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    color: black;
+    line-height: 30px;
+}
+
+.atlas-sub-abstract-text {
+    display: flex;
+    justify-content: center;
+}
+
+.atlas-sub-abstract-text {
+    font-family: 'EB Garamond', serif;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: italic;
+    color: #777;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.italics {
+    font-style: italic;
+}
+
+.atlas-sub-text .first-character {
+    width: 40px;
+  }
+
+.atlas-sub-text {
+    columns: 300px 2;
+    column-gap: 30px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.atlas-sub-text p {
+    font-family: 'EB Garamond', serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+    margin-bottom: 16px;
+}
+
+.atlas-sub-img-container {
+    width: 100%;
+    max-width: 1920px;
+    margin: auto;
+}
+
+@media screen and (max-width:450px) {
+    .atlas-sub-wrapper {
+        padding: 40px 50px;
+        margin-top: 120px;
+        gap: 50px;
+    }
+}
+
+/* PARIS FOOD */
+.img-gallery-paris-food {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 30px;
+    grid-template-areas:
+        'paris-food-1 paris-food-1 paris-food-1 paris-food-14'
+        'paris-food-12 paris-food-12 paris-food-10 paris-food-10'
+        'paris-food-12 paris-food-12 paris-food-4 paris-food-4'
+        'paris-food-13 paris-food-13 paris-food-17 paris-food-18'
+        'paris-food-7 paris-food-7 paris-food-7 paris-food-7'
+        'paris-food-5 paris-food-5 paris-food-9 paris-food-9'
+        'paris-food-6 paris-food-6 paris-food-9 paris-food-9'
+        'paris-food-11 paris-food-11 paris-food-16 paris-food-8'
+        'paris-food-11 paris-food-11 paris-food-3 paris-food-3'
+        'paris-food-15 paris-food-15 paris-food-15 paris-food-15'
+        ;
+}
+
+.img-gallery-paris-food div {
+    width: 100%;
+    height: 350px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.paris-food-1 {
+    grid-area: paris-food-1;
+}
+.paris-food-3 {
+    grid-area: paris-food-3;
+}
+.paris-food-4 {
+    grid-area: paris-food-4;
+}
+.paris-food-5 {
+    grid-area: paris-food-5;
+}
+.paris-food-6 {
+    grid-area: paris-food-6;
+}
+.paris-food-7 {
+    grid-area: paris-food-7;
+}
+.paris-food-8 {
+    grid-area: paris-food-8;
+}
+.paris-food-9 {
+    grid-area: paris-food-9;
+    min-height: 750px;
+}
+.paris-food-10 {
+    grid-area: paris-food-10;
+}
+.paris-food-11 {
+    grid-area: paris-food-11;
+    min-height: 750px;
+}
+.paris-food-12 {
+    grid-area: paris-food-12;
+    min-height: 750px;
+}
+.paris-food-13 {
+    grid-area: paris-food-13;
+}
+.paris-food-14 {
+    grid-area: paris-food-14;
+}
+.paris-food-15 {
+    grid-area: paris-food-15;
+}
+.paris-food-16 {
+    grid-area: paris-food-16;
+}
+.paris-food-17 {
+    grid-area: paris-food-17;
+}
+.paris-food-18 {
+    grid-area: paris-food-18;
+}
+
+@media screen and (max-width:768px) {
+    .img-gallery-paris-food {
+        grid-template-areas:
+        'paris-food-1 paris-food-1 paris-food-1 paris-food-1'
+        'paris-food-14 paris-food-14 paris-food-10 paris-food-10'
+        'paris-food-12 paris-food-12 paris-food-4 paris-food-4'
+        'paris-food-13 paris-food-13 paris-food-13 paris-food-13'
+        'paris-food-17 paris-food-17 paris-food-18 paris-food-18'
+        'paris-food-7 paris-food-7 paris-food-7 paris-food-7'
+        'paris-food-5 paris-food-5 paris-food-5 paris-food-5'
+        'paris-food-9 paris-food-9 paris-food-9 paris-food-9'
+        'paris-food-9 paris-food-9 paris-food-9 paris-food-9'
+        'paris-food-6 paris-food-6 paris-food-6 paris-food-6'
+        'paris-food-16 paris-food-16 paris-food-8 paris-food-8'
+        'paris-food-11 paris-food-11 paris-food-11 paris-food-11'
+        'paris-food-15 paris-food-15 paris-food-15 paris-food-15'
+        'paris-food-3 paris-food-3 paris-food-3 paris-food-3';
+    }
+    .paris-food-12 {
+        grid-area: paris-food-12;
+        min-height: 350px
+    }
+}
+
+@media screen and (max-width:600px) {
+    .img-gallery-paris-food {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        'paris-food-1'
+        'paris-food-14'
+        'paris-food-10'
+        'paris-food-12'
+        'paris-food-4'
+        'paris-food-13'
+        'paris-food-17'
+        'paris-food-18'
+        'paris-food-7'
+        'paris-food-5'
+        'paris-food-9'
+        'paris-food-6'
+        'paris-food-16'
+        'paris-food-8'
+        'paris-food-11'
+        'paris-food-15'
+        'paris-food-3';
+    }
+
+    .img-gallery-paris-food div {
+        height: 250px;
+    }
+
+    .paris-food-12,
+    .paris-food-10,
+    .paris-food-14,
+    .paris-food-17,
+    .paris-food-18,
+    .paris-food-9,
+    .paris-food-16,
+    .paris-food-8,
+    .paris-food-11 {
+        min-height: 400px;
+    }
+}
+
+/* COMING SOON */
+#coming-soon {
+    height: 100vh;
+}
+
+.coming-soon-wrapper {
+    display: grid;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    cursor: default;
+}
+
+.coming-soon-text-wrapper {
+    margin: auto;
+}
+
+.coming-soon-text {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    color: #F34B26;
+}
+
+/* MIXTAPE GENTLY DOES IT NOW */
+#mixtape-sub {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    align-items: center;
+}
+
+.spotify-wrapper {
+    padding: 40px 100px;
+    margin-top: 120px;
+}
+
+.spotify-item-wrapper {
+    margin: auto;
+}
+
+.mixtape-text-wrapper {
+    line-height: 20px;
+    padding: 0 120px;
+}
+
+p#mixtape-label {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+    color: #777;
+    letter-spacing: 2px;
+}
+
+p#mixtape-title {
+    font-family: 'EB Garamond', serif;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    color: black;
+}
+
+p#mixtape-description {
+    font-family: 'EB Garamond', serif;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
+}
+
+/* MIXTAPE */
+.mixtape-wrapper {
+    display: grid;
+    grid-auto-flow: row;
+    grid-gap: 30px;
+    padding: 40px 100px;
+    margin-top: 120px;
+}
+
+.mixtape-wrapper .mixtape-category {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    color: #F34B26;
+}
+
+.mixtape-wrapper .mixtape-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 50px;
+    
+}   
+
+.mixtape-wrapper section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+    transition: transform 350ms ease-in-out;
+}
+
+.mixtape-wrapper section:hover {
+    transform: translateY(-5px);
+}
+
+.mixtape-img-background {
+    aspect-ratio: 4 / 5;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.annotation-mixtape {
+    line-height: 20px;
+}
+
+.mixtape-wrapper section:hover p#mixtape-title {
+    color: #F34B26;
+}
+
+.annotation-mixtape a {
+    text-decoration: none;
+}
+
+p#mixtape-title {
+    transition: color 350ms ease-in-out;
+}
+
+#coming-soon-mixtape {
+    opacity: 0;
+}

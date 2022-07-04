@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Atlas &#8212; JO. CHONG</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="styles.css"
+  <script src="script.js"></script>
+</head>
+
+<body>
+
+<div id="atlas" class="container">
+
+<!-- NAVBAR -->
+  <div class="nav-wrapper">
+    <a href="index.html" class="name">JO. CHONG</a>
+    <div class="button-wrapper"><button data-text-swap="&#8722">&#43;</button></div>
+    <div class="dropdown-menu">
+      <div class="column-1">
+        <a href="about.html" class="link">About</a>
+        <a href="atlas.html" class="link">Atlas</a>
+        <a href="mixtape.html" class="link">Mixtapes</a>
+        <a href="coming-soon.html" class="link">Projects</a>
+        <a href="coming-soon.html" class="link">Store</a>
+      </div>
+      <div class="column-2">
+        <div class = "personal">
+          <p class="title"> Portfolio: Joelle </p>
+          <p class="subtitle"> A pasta shape enthusiast </p>
+          <p class="details">Location: Tropical Singapore</p>
+          <p class="details">Say Hi: @joallakoala</p>
+        </div>
+        <div class = social-icon-wrapper>
+          <a class="social-icon" href="https://www.instagram.com/joallakoala" target="_blank">
+            <ion-icon name="logo-instagram"></ion-icon> </a>
+          <a class="social-icon" href="https://www.linkedin.com/in/chong-jo" target="_blank">
+            <ion-icon name="logo-linkedin"></ion-icon> </a>
+          <a class="social-icon" href="https://www.pinterest.com/joallakoala/_created/" target="_blank">
+            <ion-icon name="logo-pinterest"></ion-icon> </a>
+        </div>
+      </div>
+      </div>
+  </div>
+
+  <div class="atlas-wrapper">
+      <div class="country">France</div>
+      <div class="country-content">
+        <section class="one">
+          <a href="paris-food.html"><div class="atlas-img-background" style="background-image: url(images/atlas/paris/food/paris-food-12.jpg);"></div></a>
+          <div class="annotation-atlas">
+              <p id="location">PARIS | FRANCE</p>
+              <a href="paris-food.html"><p id="title">Discover Boulangerie</p></a>
+              <p id="words">Architectural marvels of a croissant.</p>
+          </div>
+        </section>
+        <section class="two">
+            <div class="img-background-coming-soon" style="background-image: url(images/atlas/paris/art/paris-art-1.jpg);">
+              <div class="atlas-coming-soon">
+                <div class="atlas-coming-soon-text">Coming Soon.</div>
+              </div>
+            </div>
+            <div class="annotation-atlas">
+                <p id="location">PARIS | FRANCE</p>
+                <p id="title">Art &amp; Design</p>
+                <p id="words">Changing of the seasons: from Napoleon’s citrus trees to Monet’s water lilies.</p>
+            </div>
+          </section>
+          <section class="three">
+            <div class="img-background-coming-soon" style="background-image: url(images/atlas/paris/city/paris-city-1.jpg);">
+              <div class="atlas-coming-soon">
+                <div class="atlas-coming-soon-text">Coming Soon.</div>
+              </div>
+            </div>
+            <div class="annotation-atlas">
+                <p id="location">PARIS | FRANCE</p>
+                <p id="title">Mmrs</p>
+                <p id="words">The City.</p>
+            </div>
+          </section>
+      </div> 
+      <div class="country">Italy</div>
+      <div class="country-content">
+          <section class="one">
+            <div class="img-background-coming-soon" style="background-image: url(images/atlas/como/montes/como-monte-1.jpg);">
+              <div class="atlas-coming-soon">
+                <div class="atlas-coming-soon-text">Coming Soon.</div>
+              </div>
+            </div>
+            <div class="annotation-atlas">
+                <p id="location">COMO | ITALY</p>
+                <p id="title">An Alternative to Ferries</p>
+                <p id="words">Exploring the Triangolo lariano on foot.</p>
+            </div>
+          </section>
+          <section class="two">
+            <div class="img-background-coming-soon" style="background-image: url(images/atlas/como/towns/como-town-1.jpg);">
+              <div class="atlas-coming-soon">
+                <div class="atlas-coming-soon-text">Coming Soon.</div>
+              </div>
+            </div>
+            <div class="annotation-atlas">
+                <p id="location">COMO | ITALY</p>
+                <p id="title">Matter of Community.</p>
+                <p id="words">Defining Lago di Como</p>
+            </div>
+          </section>
+          <section class="three">
+            <div class="img-background-coming-soon" style="background-image: url(images/atlas/milan/milan-1.jpg);">
+              <div class="atlas-coming-soon">
+                <div class="atlas-coming-soon-text">Coming Soon.</div>
+              </div>
+            </div>
+            <div class="annotation-atlas">
+                <p id="location"> MILAN | ITALY </p>
+                <p id="title">Searching for Sprezzatura</p>
+                <p id="words">A state of studied carelessness.</p>
+            </div>
+          </section>
+      </div>
+  </div>
+
+  </div>
+  </body>
+  
+  <!-- Javascript -->
+  <!-- BUTTON JAVASCRIPT -->
+<script>
+    let click = document.querySelector('button');
+    let list = document.querySelector('.dropdown-menu');
+    click.addEventListener("click",()=>{
+      list.classList.toggle('newdropdown-menu');
+    });
+  </script>
+  <script>
+    var button = document.querySelectorAll("button")[0];
+    button.addEventListener('click', function() {
+    if (button.getAttribute("data-text-swap") == button.innerHTML) {
+    button.innerHTML = button.getAttribute("data-text-original");
+    } else {
+    button.setAttribute("data-text-original", button.innerHTML);
+    button.innerHTML = button.getAttribute("data-text-swap");
+    }
+    }, false);
+  </script>
+  
+    <!-- SOCIAL MEDIA ICONS (leave here) -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
