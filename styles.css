@@ -423,7 +423,7 @@ button:hover {
 .about-body p {
     font-family: 'EB Garamond', serif;
     color: black;
-    font-size: 16px;
+    font-size: 14px;
     margin-top: 16px;
     margin-bottom: 16px;
     text-align: justify;
@@ -648,6 +648,13 @@ p#atlas-sub-title {
     line-height: 30px;
 }
 
+p#date {
+    font-family: 'EB Garamond', serif;
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+    color: #777;
+}
 .atlas-sub-abstract-text {
     display: flex;
     justify-content: center;
@@ -655,7 +662,7 @@ p#atlas-sub-title {
 
 .atlas-sub-abstract-text {
     font-family: 'EB Garamond', serif;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     font-style: italic;
     color: #777;
@@ -680,7 +687,7 @@ p#atlas-sub-title {
 
 .atlas-sub-text p {
     font-family: 'EB Garamond', serif;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     color: black;
     margin-bottom: 16px;
@@ -690,6 +697,56 @@ p#atlas-sub-title {
     width: 100%;
     max-width: 1920px;
     margin: auto;
+}
+
+hr {
+    height: 0.1px;
+    border-width: 0;
+    background-color: #777;
+    width: 50%;
+}
+
+p .poi {
+    font-family: 'Source Sans Pro', sans-serif;
+    text-transform: uppercase;
+    color: #F34B26;
+}
+
+li {
+    font-family: 'EB Garamond', serif;
+    list-style: inside;
+    list-style-type: decimal;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+    text-align: left;
+    text-justify: none;
+}
+
+li .place-name {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: black;
+    text-transform: uppercase;
+    transition: color 350ms ease-in-out;
+}
+
+li .place-name:hover {
+    color: #F34B26;
+}
+
+li .place-descriptor {
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+    /* color: #777; */
+}
+
+li .place-address {
+    font-size: 12px;
+    font-style: italic;
+    color: #777;
 }
 
 @media screen and (max-width:450px) {
