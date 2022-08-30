@@ -423,7 +423,7 @@ button:hover {
 .about-body p {
     font-family: 'EB Garamond', serif;
     color: black;
-    font-size: 14px;
+    font-size: 16px;
     margin-top: 16px;
     margin-bottom: 16px;
     text-align: justify;
@@ -717,7 +717,6 @@ li {
     list-style: inside;
     list-style-type: decimal;
     font-size: 16px;
-    letter-spacing: 2px;
     margin-bottom: 6px;
     text-align: left;
     text-justify: none;
@@ -729,7 +728,9 @@ li .place-name {
     font-weight: 400;
     color: black;
     text-transform: uppercase;
+    letter-spacing: 2px;
     transition: color 350ms ease-in-out;
+    
 }
 
 li .place-name:hover {
