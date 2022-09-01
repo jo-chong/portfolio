@@ -809,18 +809,18 @@ li .place-address {
 }
 .paris-food-9 {
     grid-area: paris-food-9;
-    min-height: 750px;
+    min-height: 730px;
 }
 .paris-food-10 {
     grid-area: paris-food-10;
 }
 .paris-food-11 {
     grid-area: paris-food-11;
-    min-height: 750px;
+    min-height: 730px;
 }
 .paris-food-12 {
     grid-area: paris-food-12;
-    min-height: 750px;
+    min-height: 730px;
 }
 .paris-food-13 {
     grid-area: paris-food-13;
@@ -905,6 +905,137 @@ li .place-address {
     }
 }
 
+/* PARIS ART */
+.img-gallery-paris-art {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 30px;
+    grid-template-areas:
+    'paris-art-11 paris-art-11 paris-art-15 paris-art-15'
+    'paris-art-11 paris-art-11 paris-art-6 paris-art-6'
+    'paris-art-2 paris-art-2 paris-art-3 paris-art-3'
+    'paris-art-14 paris-art-14 paris-art-3 paris-art-3'
+    'paris-art-7 paris-art-7 paris-art-7 paris-art-7'
+    'paris-art-8 paris-art-8 paris-art-13 paris-art-13'
+    'paris-art-8 paris-art-8 paris-art-13 paris-art-13'
+    'paris-art-10 paris-art-12 paris-art-9 paris-art-9';
+}
+
+.img-gallery-paris-art div {
+    width: 100%;
+    height: 350px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.paris-art-2 {
+    grid-area: paris-art-2;
+}
+.paris-art-3 {
+    grid-area: paris-art-3;
+    min-height: 730px;
+}
+.paris-art-4 {
+    grid-area: paris-art-4;
+}
+.paris-art-5 {
+    grid-area: paris-art-5;
+}
+.paris-art-6 {
+    grid-area: paris-art-6;
+}
+.paris-art-7 {
+    grid-area: paris-art-7;
+}
+.paris-art-8 {
+    grid-area: paris-art-8;
+    min-height: 730px;
+}
+.paris-art-9 {
+    grid-area: paris-art-9;
+}
+.paris-art-10 {
+    grid-area: paris-art-10;
+}
+.paris-art-11 {
+    grid-area: paris-art-11;
+    min-height: 730px;
+}
+.paris-art-12 {
+    grid-area: paris-art-12;
+}
+.paris-art-13 {
+    grid-area: paris-art-13;
+    min-height: 730px;
+}
+.paris-art-14 {
+    grid-area: paris-art-14;
+}
+.paris-art-15 {
+    grid-area: paris-art-15;
+}
+
+@media screen and (max-width:768px) {
+    .img-gallery-paris-art {
+        grid-template-areas:
+        'paris-art-15 paris-art-15 paris-art-15 paris-art-15'
+        'paris-art-11 paris-art-11 paris-art-11 paris-art-11'
+        'paris-art-3 paris-art-3 paris-art-3 paris-art-3'
+        'paris-art-6 paris-art-6 paris-art-6 paris-art-6'
+        'paris-art-2 paris-art-2 paris-art-2 paris-art-2'
+        'paris-art-14 paris-art-14 paris-art-14 paris-art-14'
+        'paris-art-7 paris-art-7 paris-art-7 paris-art-7'
+        'paris-art-8 paris-art-8 paris-art-8 paris-art-8'
+        'paris-art-12 paris-art-12 paris-art-12 paris-art-12'
+        'paris-art-1 paris-art-1 paris-art-1 paris-art-1'
+        'paris-art-9 paris-art-9 paris-art-9 paris-art-9'
+        'paris-art-10 paris-art-10 paris-art-13 paris-art-13';
+        }
+
+    .paris-art-12 {
+        min-height: 730px;
+    }
+
+    .paris-art-13 {
+        min-height: 350px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .img-gallery-paris-art {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        'paris-art-11'
+        'paris-art-15'
+        'paris-art-6'
+        'paris-art-2'
+        'paris-art-3'
+        'paris-art-14'
+        'paris-art-7'
+        'paris-art-8'
+        'paris-art-10'
+        'paris-art-1'
+        'paris-art-12'
+        'paris-art-9'
+        'paris-art-13';
+    }
+    .img-gallery-paris-art div {
+        height: 250px;
+    }
+
+    .paris-art-3,
+    .paris-art-8,
+    .paris-art-10,
+    .paris-art-12,
+    .paris-art-11,
+    .paris-art-13
+    {
+        min-height: 400px;
+    }
+}
+
 /* PARIS CITY */
 .img-gallery-paris-city {
     display: grid;
@@ -931,7 +1062,7 @@ li .place-address {
 
 .paris-city-2 {
     grid-area: paris-city-2;
-    min-height: 750px;
+    min-height: 730px;
 }
 .paris-city-3 {
     grid-area: paris-city-3;
@@ -941,11 +1072,11 @@ li .place-address {
 }
 .paris-city-6 {
     grid-area: paris-city-6;
-    min-height: 750px;
+    min-height: 730px;
 }
 .paris-city-8 {
     grid-area: paris-city-8;
-    min-height: 750px;
+    min-height: 730px;
 }
 
 
@@ -985,153 +1116,6 @@ li .place-address {
     }
 
     .paris-city-2
-     {
-        min-height: 400px;
-    }
-}
-
-/* PARIS ART */
-.img-gallery-paris-art {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto;
-    grid-gap: 30px;
-    grid-template-areas:
-    'paris-art-11 paris-art-11 paris-art-15 paris-art-15'
-    'paris-art-11 paris-art-11 paris-art-6 paris-art-6'
-    'paris-art-2 paris-art-2 paris-art-3 paris-art-3'
-    'paris-art-14 paris-art-14 paris-art-3 paris-art-3'
-    'paris-art-7 paris-art-7 paris-art-7 paris-art-7'
-    'paris-art-8 paris-art-8 paris-art-10 paris-art-1'
-    'paris-art-8 paris-art-8 paris-art-12 paris-art-9';
-}
-
-.img-gallery-paris-art div {
-    width: 100%;
-    height: 350px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.paris-art-1 {
-    grid-area: paris-art-1;
-}
-
-.paris-art-2 {
-    grid-area: paris-art-2;
-}
-
-.paris-art-3 {
-    grid-area: paris-art-3;
-    min-height: 750px;
-}
-
-.paris-art-4 {
-    grid-area: paris-art-4;
-}
-
-.paris-art-5 {
-    grid-area: paris-art-5;
-}
-
-.paris-art-6 {
-    grid-area: paris-art-6;
-}
-
-.paris-art-7 {
-    grid-area: paris-art-7;
-}
-
-.paris-art-8 {
-    grid-area: paris-art-8;
-    min-height: 750px;
-}
-
-.paris-art-9 {
-    grid-area: paris-art-9;
-}
-
-.paris-art-10 {
-    grid-area: paris-art-10;
-}
-
-.paris-art-11 {
-    grid-area: paris-art-11;
-    min-height: 750px;
-}
-
-.paris-art-12 {
-    grid-area: paris-art-12;
-}
-
-.paris-art-13 {
-    grid-area: paris-art-13;
-}
-
-.paris-art-14 {
-    grid-area: paris-art-14;
-}
-
-.paris-art-15 {
-    grid-area: paris-art-15;
-}
-
-@media screen and (max-width:768px) {
-    .img-gallery-paris-art {
-        grid-template-areas:
-        'paris-art-15 paris-art-15 paris-art-15 paris-art-15'
-        'paris-art-11 paris-art-11 paris-art-3 paris-art-3'
-        'paris-art-6 paris-art-6 paris-art-6 paris-art-6'
-        'paris-art-2 paris-art-2 paris-art-2 paris-art-2'
-        'paris-art-14 paris-art-14 paris-art-14 paris-art-14'
-        'paris-art-7 paris-art-7 paris-art-7 paris-art-7'
-        'paris-art-8 paris-art-8 paris-art-8 paris-art-8'
-        'paris-art-12 paris-art-12 paris-art-10 paris-art-10'
-        'paris-art-1 paris-art-1 paris-art-1 paris-art-1'
-        'paris-art-9 paris-art-9 paris-art-9 paris-art-9'
-        ;
-        }
-
-    .paris-art-3 {
-        grid-area: paris-art-3;
-        min-height: 350px;
-    }
-
-    .paris-art-11 {
-        grid-area: paris-art-11;
-        min-height: 350px;
-    }
-}
-
-@media screen and (max-width:600px) {
-    .img-gallery-paris-art {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-        'paris-art-11'
-        'paris-art-15'
-        'paris-art-6'
-        'paris-art-2'
-        'paris-art-3'
-        'paris-art-14'
-        'paris-art-7'
-        'paris-art-8'
-        'paris-art-10'
-        'paris-art-1'
-        'paris-art-12'
-        'paris-art-9'
-        ;
-    }
-
-    .img-gallery-paris-art div {
-        height: 250px;
-    }
-
-    .paris-art-8,
-    .paris-art-12,
-    .paris-art-10,
-    .paris-art-3,
-    .paris-art-11
      {
         min-height: 400px;
     }
